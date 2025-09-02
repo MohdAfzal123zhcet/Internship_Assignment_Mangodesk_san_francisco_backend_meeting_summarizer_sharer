@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 @CrossOrigin(origins = {
         "http://localhost:5173",
-        "https://mohdafzal-lumio-frontend-production.up.railway.app/"
+        "https://internship-assignment-mangodesk-san-one.vercel.app/"
 })
 
 
