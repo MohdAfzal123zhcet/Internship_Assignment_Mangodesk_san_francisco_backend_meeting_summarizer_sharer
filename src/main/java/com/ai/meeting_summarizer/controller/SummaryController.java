@@ -24,7 +24,7 @@ public class SummaryController {
     @Value("${GROQ_API_KEY}")
     private String openaiApiKey;
 
-    @Value("${groq.model}")
+    @Value("${GROQ_MODEL}")
     private String groqModel;
 
     @Autowired
