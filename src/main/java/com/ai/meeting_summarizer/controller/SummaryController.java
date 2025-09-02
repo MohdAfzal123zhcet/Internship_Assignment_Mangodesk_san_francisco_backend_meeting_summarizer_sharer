@@ -24,6 +24,9 @@ public class SummaryController {
     @Value("${GROQ_API_KEY}")
     private String openaiApiKey;
 
+    @Value("${groq.model}")
+    private String groqModel;
+
     @Autowired
     private EmailService emailService;
 
@@ -42,7 +45,7 @@ public class SummaryController {
         headers.set("Content-Type", "application/json");
 
         Map<String, Object> payload = new HashMap<>();
-        payload.put("model", "llama3-8b-8192");
+        payload.put("model", groqModel);
         payload.put("messages", List.of(
                 Map.of("role", "system", "content", "You are a helpful assistant."),
                 Map.of("role", "user", "content", fullPrompt)
